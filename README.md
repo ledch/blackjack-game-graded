@@ -6,6 +6,7 @@ Based off of the Scrimba blackjack game with some modified code.
 
 Modifications:
 - can not continue clicking "START GAME" after losing (same as "NEW CARD")
+- "START GAME" will reset the game after you lose
 - slight code differences
 
 Some limitations: 
