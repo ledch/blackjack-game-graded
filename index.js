@@ -2,7 +2,7 @@ let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 //starting out with false, because how can you be alive when you're not even playing the game?
-let isAlive = false;
+let isAlive = true;
 let messageEl = document.querySelector(".message-el");
 let sumEl = document.querySelector(".sum-el");
 let cardsEl = document.querySelector(".cards-el");
@@ -36,11 +36,18 @@ function renderGame() {
 }
 
 function startGame() {
-    isAlive = true;
-    let card = getRandomCard();
-    cards.push(card);
-    sum+=card;
-    renderGame();
+    if (isAlive && hasBlackJack!==true) {
+        let card = getRandomCard();
+        cards.push(card);
+        sum+=card;
+        renderGame();
+    }
+    else {
+        isAlive=true;
+        sum = 0;
+        cards=[];
+        renderGame();
+    }
 }
 
 function getRandomCard() {
