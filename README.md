@@ -1,13 +1,12 @@
 # blackjack-game
 
-A blackjack game that tells the user if they have won or lost or can continue playing. 
+A blackjack game using HTML, CSS, and Javascript
 
-Based off of the Scrimba blackjack game with some modified code.
+Based off of the Scrimba blackjack game with added modifications.
 
 Modifications:
-- the game will reset after you lose
-- you can only press either START GAME or NEW CARD at once (why start a new game while in the middle of one?)
-- slight code differences
+- you can not press both START GAME and NEW CARD at the same time(once you start a game, you can not press it again until the game is over)
+- START GAME will start a new game once you either lose or win
 
 Some limitations: 
 - pulling an "Ace" here does not allow you to choose either 1 or 11 as the value (sets it to 11 instead)
