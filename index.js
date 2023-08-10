@@ -63,6 +63,7 @@ function renderGame() {
     messageEl.textContent = message;
 }
 
+//Evaluates if you are in the middle of a game or ready to start a new game
 function checkGameState() {
     //enable start button, disable new card button if you get blackjack or lose
     if (!isAlive || hasBlackJack===true) {
@@ -77,6 +78,7 @@ function checkGameState() {
     }
 }
 
+//resets game values
 function resetGame() {
     isAlive=true;
     sum = 0;
