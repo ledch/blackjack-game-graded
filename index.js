@@ -2,19 +2,19 @@ let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = true;
-let messageEl = document.querySelector(".message-el");
-let sumEl = document.querySelector(".sum-el");
-let cardsEl = document.querySelector(".cards-el");
-let startBtn = document.querySelector(".start-btn");
-let newCardBtn = document.querySelector(".new-card-btn")
+const messageEl = document.querySelector(".message-el");
+const sumEl = document.querySelector(".sum-el");
+const cardsEl = document.querySelector(".cards-el");
+const startBtn = document.querySelector(".start-btn");
+const newCardBtn = document.querySelector(".new-card-btn")
 
 //populate player name and number of chips
-let player = {
+const player = {
     name: "Per",
     chips: "145"
 }
 
-let playerEl = document.querySelector(".player-el");
+const playerEl = document.querySelector(".player-el");
 playerEl.textContent = player.name + ": $" + player.chips;
 
 //player takes a turn, getting a card
