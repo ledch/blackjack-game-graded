@@ -2,7 +2,7 @@
 
 A blackjack game using HTML, CSS, and Javascript
 
-Based off of the Scrimba blackjack game with added modifications.
+Based off of the Scrimba blackjack game with added modifications and changed code:
 
 Modifications:
 - you can not press both START GAME and NEW CARD at the same time(once you start a game, you can not press it again until the game is over)
