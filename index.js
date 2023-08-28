@@ -7,17 +7,15 @@ const sumEl = document.querySelector(".sum-el");
 const cardsEl = document.querySelector(".cards-el");
 const startBtn = document.querySelector(".start-btn");
 const newCardBtn = document.querySelector(".new-card-btn")
+const playerEl = document.querySelector(".player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
 
-//populate player name and number of chips
+// Populate player name and number of chips
 const player = {
     name: "Per",
     chips: "145"
 }
 
-const playerEl = document.querySelector(".player-el");
-playerEl.textContent = player.name + ": $" + player.chips;
-
-//player takes a turn, getting a card
 function takeTurn() {
     getRandomCard();
     checkSum();
@@ -25,6 +23,7 @@ function takeTurn() {
     checkGameState();
 }
 
+// Draws a card and returns the calculated value of the card
 function getRandomCard() {
     let randomCard = (Math.floor(Math.random()*13) + 1);
    if (randomCard===1) {
@@ -44,7 +43,7 @@ function checkSum() {
     sum+=cardValue;
 }
 
-//prints out the messages
+// Plays the game and determines state of player
 function renderGame() {
     cardsEl.textContent = "Cards:";
     for (let i=0; i<cards.length; i++) {
@@ -65,20 +64,20 @@ function renderGame() {
 
 //Evaluates if you are in the middle of a game or ready to start a new game
 function checkGameState() {
-    //enable start button, disable new card button if you get blackjack or lose
+    // Enable start button, disable new card button if you get blackjack or lose
     if (!isAlive || hasBlackJack===true) {
         startBtn.disabled = false;
         newCardBtn.disabled = true;
         resetGame();
     }
-    //if you are still playing only new card is enabled
+    // New card button enabled only if you are still alive
     else {
         startBtn.disabled=true;
         newCardBtn.disabled = false;
     }
 }
 
-//resets game values
+// Resets game values
 function resetGame() {
     isAlive=true;
     sum = 0;
