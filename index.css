@@ -1,3 +1,15 @@
+/* DAN's Comment #1
+Generally, it is good practice to put a comment at the top of each and every code file.
+Do people actually do this at big enterprise companies? No, but in a class setting I'd expect to 
+see some sort of header containing information about what this file is for/ what the code inside
+is doing, and whether this file has dependencies, or other code files depend on this.
+
+In this case:
+This file serves as the styling for the main index.html page (on bigger websites, generally
+there will be a parent css file containing the general styling, and then each individual page
+has a separate css file). Index.html has this as a dependency.
+*/
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     background-image: url("images/table.png");
@@ -17,6 +29,16 @@ h1 {
 
 /* 3. Make sure that the two buttons have some space between
 each other when they are rendered out vertically */
+/* Dan's Comment
+Be careful about styling all buttons in this way, what if you wanted to make
+a login button that is styled differently? Instead unless you want to style
+all button elements the same way, for instance, for the game buttons add
+class="game_button" and then set the css file to have
+.game_button {
+ // style code here
+}
+see https://www.w3schools.com/cssref/sel_class.php
+*/
 button {
     color: #016f32;
     width: 150px;
